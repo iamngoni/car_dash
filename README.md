@@ -10,6 +10,8 @@ A Very Good Project created by Very Good CLI.
 
 ---
 
+![Screenshot](./screenshots/1.png)
+
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
