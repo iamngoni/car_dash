@@ -11,6 +11,8 @@ import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
 
 import '../../configs/colors.dart';
+import '../widgets/dash_map.dart';
+import '../widgets/dash_navigation_bar.dart';
 
 class CarDash extends StatelessWidget {
   const CarDash({super.key});
@@ -19,29 +21,64 @@ class CarDash extends StatelessWidget {
   Widget build(BuildContext context) {
     return RelativeBuilder(
       builder: (context, height, width, sy, sx) {
-        return Container(
-          height: context.height,
-          width: context.width,
-          padding: EdgeInsets.symmetric(
-            horizontal: sx(10),
-            vertical: sy(10),
-          ),
-          decoration: const BoxDecoration(
-            color: DashColors.backgroundColor,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    child: ImageIcon(
-                      AssetImage('assets/icons/home.png'),
-                    ),
+        return Scaffold(
+          body: Container(
+            height: context.height,
+            width: context.width,
+            padding: EdgeInsets.symmetric(
+              horizontal: sx(10),
+              vertical: sy(10),
+            ),
+            decoration: const BoxDecoration(
+              color: DashColors.backgroundColor,
+            ),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: context.height,
+                          width: context.width,
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [
+                                DashColors.dashBackgroundColor1,
+                                DashColors.dashBackgroundColor2,
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(7),
+                            boxShadow: [
+                              BoxShadow(
+                                color: DashColors.white.withOpacity(0.05),
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: const Offset(0.5, 0.5),
+                              ),
+                              BoxShadow(
+                                color: DashColors.white.withOpacity(0.05),
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: const Offset(-0.5, -0.5),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: sx(7),
+                      ),
+                      const DashMap(),
+                    ],
                   ),
-                ],
-              ),
-            ],
+                ),
+                SizedBox(
+                  height: sy(15),
+                ),
+                const DashNavigationBar(),
+              ],
+            ),
           ),
         );
       },

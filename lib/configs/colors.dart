@@ -20,6 +20,7 @@ class DashColors {
   static const Color inactiveControlChildColor = Color(0xFF4e5369);
   static const Color lockedDoorColor = Color(0xFFd4030a);
   static const Color unlockedDoorColor = Color(0xFF98b5ed);
-  static const Color green = Color(0xFF519763);
+  static const Color activeBorderColor = Color(0xFF519763);
+  static const Color inactiveBorderColor = Color(0xff282b3f);
   static const Color backgroundColor = Color(0xFF020514);
 }
