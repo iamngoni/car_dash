@@ -11,6 +11,7 @@ import 'package:handy_extensions/handy_extensions.dart';
 import 'package:relative_scale/relative_scale.dart';
 
 import '../../configs/colors.dart';
+import '../widgets/dash_controls_area.dart';
 import '../widgets/dash_map.dart';
 import '../widgets/dash_navigation_bar.dart';
 
@@ -37,34 +38,8 @@ class CarDash extends StatelessWidget {
                 Expanded(
                   child: Row(
                     children: [
-                      Expanded(
-                        child: Container(
-                          height: context.height,
-                          width: context.width,
-                          decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                              colors: [
-                                DashColors.dashBackgroundColor1,
-                                DashColors.dashBackgroundColor2,
-                              ],
-                            ),
-                            borderRadius: BorderRadius.circular(7),
-                            boxShadow: [
-                              BoxShadow(
-                                color: DashColors.white.withOpacity(0.05),
-                                spreadRadius: 1,
-                                blurRadius: 1,
-                                offset: const Offset(0.5, 0.5),
-                              ),
-                              BoxShadow(
-                                color: DashColors.white.withOpacity(0.05),
-                                spreadRadius: 1,
-                                blurRadius: 1,
-                                offset: const Offset(-0.5, -0.5),
-                              ),
-                            ],
-                          ),
-                        ),
+                      const Expanded(
+                        child: DashControlsArea(),
                       ),
                       SizedBox(
                         width: sx(7),

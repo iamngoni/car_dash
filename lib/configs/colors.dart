@@ -23,4 +23,5 @@ class DashColors {
   static const Color activeBorderColor = Color(0xFF519763);
   static const Color inactiveBorderColor = Color(0xff282b3f);
   static const Color backgroundColor = Color(0xFF020514);
+  static const Color mediaDurationBarColor2 = Color(0xFFb459df);
 }
