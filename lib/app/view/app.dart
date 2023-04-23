@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:car_dash/counter/counter.dart';
 import 'package:car_dash/l10n/l10n.dart';
+import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
