@@ -196,10 +196,10 @@ packages:
     dependency: "direct main"
     description:
       name: handy_extensions
-      sha256: f7507a947a11d89d2c9544bf66a18ce1b851260eda6a066bac6071a7f6c9982a
+      sha256: a7e7ae3e306990a8ba704d28272751cf7017c505296a0bb94f5a46d501df8bbf
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.9"
+    version: "0.1.2"
   http:
     dependency: transitive
     description:
